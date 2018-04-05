@@ -68,4 +68,23 @@ $(document).ready(function () {
 
     searchNews("Sean Smith");
 
+    // loads up to 10 images. hides #load button if no more to load.
+    function loadImages(query, offset) {
+        $.ajax({
+            url: "https://api.giphy.com/v1/gifs/search?" + $.param({
+                api_key: key, 
+                q : query, 
+                limit: limit,
+                offset: offset
+            }),
+            method: "GET"
+        }).then(function(response) {
+            console.log(response);
+
+            // save response object, for pagination
+
+            // manage #load button visibility
+        });
+    }
+
 });
