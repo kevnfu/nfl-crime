@@ -8,8 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Internal Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -21,39 +21,74 @@
 
 <body>
 
-    <div class="navbar-fixed">
-        <nav>
+
+    <!-- <div class="container"> -->
+<div class="container">
+
+    <div id="parOne" class="parallax-container">
+        <div class="parallax">
+        </div>
+    </div>
+
+    <div class="navbar">
+        <nav id="nav">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center">You're Busted</a>
+                <a href="#!" class="brand-logo center">Yaaah Busted</a>
             </div>
         </nav>
     </div>
 
-    <div class="container">
-
-        <div class="parallax-container">
-            <div class="parallax">
-                <img src="http://www.slate.com/content/dam/slate/articles/sports/sports_nut/2014/09/140926_SNUT_FootballStatistics.png.CROP.promo-mediumlarge.png"
-                    style="transform: translate3d(-50%, 10%, 0px); opacity: 1;">
-            </div>
+    <br><br><br>
+    
+    <div class="section white">
+        <div class="row container">
+            <h2 class="header">Crime Ticket</h2>
+            <p class="grey-text text-darken-3 lighten-3">Enter in your favorite NFL player and lookup their arrest record along with the latest data surrounding their
+                arrest.
+            </p>
         </div>
-
-        <div class="section white">
-            <div class="row container">
-                <h2 class="header">Crime Ticket</h2>
-                <p class="grey-text text-darken-3 lighten-3">Enter in your favorite NFL player and lookup their arrest record along with the latest data 
-                    surrounding their arrest.</p>
-            </div>
-        </div>
-
-        <div class="parallax-container">
-            <div class="parallax">
-                <img src="http://www.cheatsheet.com/wp-content/uploads/2014/07/NFL-Fan-Arrested-Allison-Joyce-Getty-Images.jpg" 
-                    style="transform: translate3d(-50%, 0px, 0px); opacity: 1;">
-            </div>
-        </div>
-
     </div>
+
+    <br><br><br>
+
+    <div class="row">
+        <form class="col s12">
+            
+            <div class="input-field col s6">
+                <input placeholder="First Name" id="first-name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+
+            <div class="input-field col s6">
+                <input placeholder="Last Name" id="last-name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+         
+            
+            <div class="input-field col s12">
+                <input placeholder="NFL Team" id="nfl-team" type="text" class="validate">
+                <label for="nfl-team">NFL Organization</label>
+            </div>
+            
+            
+            
+            <div class="input-field col s12">
+                <input id="crime" type="text" class="validate">
+                <label for="crime">Search Crimes</label>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- <div id="parTwo" class="parallax-container">
+        <div class="parallax">
+            <img src="">
+        </div>
+    </div> -->
+
+    <br>
+    <br>
+    <!-- </div> -->
 
 
     <!-- Compiled and minified JavaScript -->
