@@ -8,7 +8,7 @@ $(document).ready(function () {
     });
 
     //Search individual player (name):
-    var searchPlayer = function (player) {
+     var searchPlayer = function (player) {
         var queryURL = "http://NflArrest.com/api/v1/player/search/?term=" + player;
 
         $.ajax({
@@ -31,6 +31,12 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
             console.log(response);
+            var results = response.data;
+
+            for (i=0; i< results.length; i++) {
+                var tRow = $("<tr>");
+                var tName = $("<td>").text(results[i].Team_preffered_name);
+            }
         });
     };
 
