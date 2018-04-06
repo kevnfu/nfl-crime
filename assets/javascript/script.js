@@ -68,7 +68,7 @@ $(document).ready(function () {
 
     searchNews("Sean Smith");
 
-    // loads up to 10 images. hides #load button if no more to load.
+    // loads up to 10 images.
     function loadImages(query, offset) {
         $.ajax({
             url: "https://api.giphy.com/v1/gifs/search?" + $.param({
