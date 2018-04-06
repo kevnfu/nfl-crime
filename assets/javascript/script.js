@@ -1,11 +1,6 @@
 $(document).ready(function () {
 
-    // NFL Crime AJAX
-    
-    $("button").on("click", function () {
-        var team = $(this).attr("data-name");
-        var position = $(this).attr("data-name");
-    });
+// NFL Crime AJAX
 
     //Search individual player (name):
      var searchPlayer = function (player) {
@@ -74,9 +69,9 @@ $(document).ready(function () {
             console.log(response);
 
             // save response object, for pagination
-
-            // manage #load button visibility
         });
-    }
+    };
+
+AJAX.searchNews("", x => console.log(x));
 
 });
