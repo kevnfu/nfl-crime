@@ -10,3 +10,13 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+jQuery(document).ready(function( $ ) {
+  $("#menu").mmenu({
+     "slidingSubmenus": false,
+     "extensions": [
+        "fx-menu-zoom",
+        "pagedim-black",
+        "position-right"
+     ]
+  });
+});

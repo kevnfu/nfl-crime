@@ -1,37 +1,46 @@
+body {
+    height: 100%;
+}
+
 #parOne {
   /* The image used */
   background-image: url("https://images7.alphacoders.com/743/743102.jpg");
 
 
   /* Create the parallax scrolling effect */
-  background-attachment: center;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  vertical-align: middle;
+  vertical-align: middle; 
 }
 /* #parTwo {
-  /* The image used
+  
   background-image: url("http://www.cheatsheet.com/wp-content/uploads/2014/07/NFL-Fan-Arrested-Allison-Joyce-Getty-Images.jpg");
-
-  /* Set a specific height 
-  min-height: 500px;
+  
+  height: 100%;
 
   transform: translate3d(-50%, 10%, 0px, 500px); 
   opacity: 1;
 
-  /* Create the parallax scrolling effect 
+ 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   
-} */
+}  */
 
-
+#home-logo {
+    font-size: 25px;
+    font-family: Lato;
+    padding-left: 20px;
+}
 #nav {
   overflow: hidden;
-  background-color: rgb(251, 101, 0);
+  background-color: #ff6f00;
+  position: fixed;
+  z-index: 2;
 }
 
 #nav a {
@@ -39,7 +48,6 @@
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -54,8 +62,4 @@
   color: white;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
+

@@ -6,8 +6,11 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--Import Google Icon Font-->
+    <!--Import Search/Close Icon Font-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Internal Stylesheet -->
@@ -21,70 +24,50 @@
 
 <body>
 
+    <div class="navbar">
+        <nav id="nav">
+            <div class="nav-wrapper">
+
+                <a href="#" id="home-logo" class="brand-logo left">NFL Crime Watch</a>
+
+                <form class="right hide-on-med-and-down" id="form1">
+                    <div class="input-field" style="max-width: 400px;">
+                        <input id="search" placeholder="Search Player" type="search" required onkeyup="getBlogs(this.value,0);">
+                        <label class="label-icon" for="search">
+                            <i class="material-icons">search</i>
+                        </label>
+                        <i class="material-icons">close</i>
+                        <div id="searchResults"></div>
+                    </div>
+                </form>
+
+            </div>
+    </div>
+    </nav>
+    </div>
+
+    <br>
+    <br>
+    <br>
 
     <!-- <div class="container"> -->
-<div class="container">
 
     <div id="parOne" class="parallax-container">
         <div class="parallax">
         </div>
     </div>
 
-    <div class="navbar">
-        <nav id="nav">
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo center">Yaaah Busted</a>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="section white">
+                    <!-- <h2 style="text-align: center" class="header">NFL Crime Ticket</h2> -->
+                </div>
             </div>
-        </nav>
-    </div>
-
-    <br><br><br>
-    
-    <div class="section white">
-        <div class="row container">
-            <h2 class="header">Crime Ticket</h2>
-            <p class="grey-text text-darken-3 lighten-3">Enter in your favorite NFL player and lookup their arrest record along with the latest data surrounding their
-                arrest.
-            </p>
         </div>
     </div>
 
-    <br><br><br>
 
-    <div class="row">
-        <form class="col s12">
-            
-            <div class="input-field col s6">
-                <input placeholder="First Name" id="first-name" type="text" class="validate">
-                <label for="first_name">First Name</label>
-            </div>
-
-            <div class="input-field col s6">
-                <input placeholder="Last Name" id="last-name" type="text" class="validate">
-                <label for="last_name">Last Name</label>
-            </div>
-         
-            
-            <div class="input-field col s12">
-                <input placeholder="NFL Team" id="nfl-team" type="text" class="validate">
-                <label for="nfl-team">NFL Organization</label>
-            </div>
-            
-            
-            
-            <div class="input-field col s12">
-                <input id="crime" type="text" class="validate">
-                <label for="crime">Search Crimes</label>
-            </div>
-        </form>
-    </div>
-</div>
-
-    <!-- <div id="parTwo" class="parallax-container">
-        <div class="parallax">
-            <img src="">
-        </div>
-    </div> -->
 
     <br>
     <br>
