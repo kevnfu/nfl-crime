@@ -13,6 +13,13 @@ class AJAX {
         }).then(f);
     }
 
+    static topPlayers(f) {
+        $.ajax({
+            url:"http://NflArrest.com/api/v1/player?limit=25",
+            method: "GET"
+        }).then(f);
+    }
+
     static searchNews(query, f) {
         $.ajax({
             url: "https://newsapi.org/v2/everything?" + $.param({
@@ -26,9 +33,9 @@ class AJAX {
     static searchGif(query, f) {
         $.ajax({
             url: "https://api.giphy.com/v1/gifs/search?" + $.param({
-                api_key: key, 
+                api_key: "aExZtytookBSVzlAfYuyRa519qcywPU3", 
                 q : query, 
-                limit: limit,
+                limit: 10,
                 offset: 0
             }),
             method: "GET"

@@ -1,77 +1,69 @@
 $(document).ready(function () {
 
-// NFL Crime AJAX
+    //Top teams
+    AJAX.topTeams(function (response) {
+        console.log(response);
+        for (i = 0; i < response.length; i++) {
+            var tPlace = ("#" + (i + 1));
+            var tName = (response[i].Team_preffered_name);
+            var tCount = (response[i].arrest_count);
 
-    //Search individual player (name):
-     var searchPlayer = function (player) {
-        var queryURL = "http://NflArrest.com/api/v1/player/search/?term=" + player;
+            $("#top-teams > tbody").append(
+                "<tr><td>" +
+                tPlace +
+                "</td><td>" +
+                tName +
+                "</td><td>" +
+                tCount +
+                "</td></tr>"
+            );
+        };
+    })
 
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-        });
+    //Top players
+    AJAX.topPlayers(function (response) {
+        console.log("top players");
+        console.log(response);
+        for (i = 0; i < response.length; i++) {
+            var tPlace = ("#" + (i + 1));
+            var tName = (response[i].Name);
+            var tTeamName = (response[i].Team_city + " " + response[i].Team_name);
+            var tCount = (response[i].arrest_count);
 
-    };
+            $("#top-players > tbody").append(
+                "<tr><td>" +
+                tPlace +
+                "</td><td>" +
+                tName +
+                "</td><td>" +
+                tTeamName +
+                "</td><td>" +
+                tCount +
+                "</td></tr>"
+            );
+        };
+    });
+    
+    // News API AJAX 
+    AJAX.searchNews("", x => console.log(x));
 
-    searchPlayer();
-
-    //Search team info (team must be searched with Team ID (ex: seahawks = SEA)): 
-    var topTeams = function () {
-        var queryURL = "http://NflArrest.com/api/v1/team/";
-
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-            var results = response.data;
-
-            for (i=0; i< results.length; i++) {
-                var tRow = $("<tr>");
-                var tName = $("<td>").text(results[i].Team_preffered_name);
-            }
-        });
-    };
-
-    topTeams();
-
-    // News API AJAX
-
-    var searchNews = function (input) {
-        var queryURL = "https://newsapi.org/v2/everything?" + $.param({
-            q: input + " arrest nfl",
-            apiKey: "003b6f29d903402b870e130d1757f4ef"
-        });
-
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        }).then(function (response) {
-            console.log(response);
-        });
-    };
-
-    searchNews("");
-
-    // loads up to 10 images. hides #load button if no more to load.
-    function loadImages(query, offset) {
-        $.ajax({
-            url: "https://api.giphy.com/v1/gifs/search?" + $.param({
-                api_key: key, 
-                q : query, 
-                limit: limit,
-                offset: offset
-            }),
-            method: "GET"
-        }).then(function(response) {
-            console.log(response);
-
-            // save response object, for pagination
-        });
-    };
-
-AJAX.searchNews("", x => console.log(x));
+    // GIPHY Api: Loads up to 10 images. hides #load button if no more to load.
+    AJAX.searchGif("", function (response) {
+        console.log(response);
+    });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
