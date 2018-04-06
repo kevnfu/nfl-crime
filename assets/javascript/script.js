@@ -1,22 +1,69 @@
-window.onscroll = function() {myFunction()};
+$(document).ready(function () {
 
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
+    //Top teams
+    AJAX.topTeams(function (response) {
+        console.log(response);
+        for (i = 0; i < response.length; i++) {
+            var tPlace = ("#" + (i + 1));
+            var tName = (response[i].Team_preffered_name);
+            var tCount = (response[i].arrest_count);
 
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-jQuery(document).ready(function( $ ) {
-  $("#menu").mmenu({
-     "slidingSubmenus": false,
-     "extensions": [
-        "fx-menu-zoom",
-        "pagedim-black",
-        "position-right"
-     ]
-  });
+            $("#top-teams > tbody").append(
+                "<tr><td>" +
+                tPlace +
+                "</td><td>" +
+                tName +
+                "</td><td>" +
+                tCount +
+                "</td></tr>"
+            );
+        };
+    })
+
+    //Top players
+    AJAX.topPlayers(function (response) {
+        console.log("top players");
+        console.log(response);
+        for (i = 0; i < response.length; i++) {
+            var tPlace = ("#" + (i + 1));
+            var tName = (response[i].Name);
+            var tTeamName = (response[i].Team_city + " " + response[i].Team_name);
+            var tCount = (response[i].arrest_count);
+
+            $("#top-players > tbody").append(
+                "<tr><td>" +
+                tPlace +
+                "</td><td>" +
+                tName +
+                "</td><td>" +
+                tTeamName +
+                "</td><td>" +
+                tCount +
+                "</td></tr>"
+            );
+        };
+    });
+    
+    // News API AJAX 
+    AJAX.searchNews("", x => console.log(x));
+
+    // GIPHY Api: Loads up to 10 images. hides #load button if no more to load.
+    AJAX.searchGif("", function (response) {
+        console.log(response);
+    });
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
