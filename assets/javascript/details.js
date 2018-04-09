@@ -6,6 +6,8 @@ $(document).ready(function() {
 
     let nameElem = $(`<h5 class="section">${player} Crimes</h5>`);
     $("#crimes").prepend(nameElem);
+    $(".modal").modal();
+    $("#form1").submit(onSearchPlayerClick);
 
     AJAX.arrestDetails(player, function(response) {
         // console.log(response);

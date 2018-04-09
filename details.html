@@ -7,18 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 
 <body>
 
+    <div id="search-modal" class="modal">
+        <div class="modal-content">
+            <h4>
+                <span id="num"></span> Results</h4>
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Arrest Count</th>
+                    </tr>
+                </thead>
+
+                <tbody id="search-table">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
     <div class="navbar">
         <nav id="nav">
             <div class="nav-wrapper">
                 <!-- <div class="container">
-                            <div class="row">
-                                <div class="col s4"> -->
+                        <div class="row">
+                            <div class="col s4"> -->
                 <!--Home Link-->
                 <a href="index.html" id="home-logo" class="brand-logo left">NFL Crime Watch</a>
 
@@ -36,21 +59,25 @@
                     </div>
                 </form>
                 <!-- </div>
-                            </div>
-                        </div> -->
+                        </div>
+                    </div> -->
             </div>
         </nav>
     </div>
 
+    <br>
+    <br>
+    <br>
 
-    <div class="container" id="details-container">
+    <div class="container">
+        <div class="row">
 
-        <!-- <h5 class="section">Crimes</h5> -->
-        <div id="crimes" class="row"></div>
+        <h5 class="section">Crimes</h5>
+        <div id="crimes"></div>
 
         <h5 class="section">News</h5>
         <div id="news"></div>
-
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
