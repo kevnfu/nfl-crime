@@ -1,3 +1,4 @@
+// class holds api call methods
 class AJAX {
     static searchPlayer(player, f) {
         $.ajax({

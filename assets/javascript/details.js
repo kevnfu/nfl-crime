@@ -1,16 +1,18 @@
+// get parameter from request
 let params = new URLSearchParams(window.location.search);
-let player = params.get("name");
-// console.log(player);
+let player = params.get("name"); // player name
 
 $(document).ready(function() {
-
+    // add header element with player name
     let nameElem = $(`<h5 class="section">${player} Crimes</h5>`);
     $("#crimes").prepend(nameElem);
+
+    // initialize modal
     $(".modal").modal();
     $("#form1").submit(onSearchPlayerClick);
 
+    // create cards for each crime
     AJAX.arrestDetails(player, function(response) {
-        // console.log(response);
         response.forEach(e => {
             let elem = $(`
                 <div class="col s12 m6" style="display">
@@ -31,8 +33,8 @@ $(document).ready(function() {
         })
     });
 
+    // create card for each news article.
     AJAX.searchNews(player, function(response) {
-        // console.log(response);
         response.articles.forEach(e => {
             let elem = $(`
                 <div class="row">

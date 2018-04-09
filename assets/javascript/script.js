@@ -1,9 +1,9 @@
-
 $(document).ready(function () {
+    // initialize search modal
     $(".modal").modal();
     $("#form1").submit(onSearchPlayerClick);
 
-    //Top teams
+    // create rows for top teams
     AJAX.topTeams(function (response) {
         response.forEach(function(e, i) {
             let row = $(`
@@ -17,7 +17,7 @@ $(document).ready(function () {
         })
     })
 
-    //Top players
+    // create rows for top players
     AJAX.topPlayers(function (response) {
         response.forEach(function(e, i) {
             let row = $(`
@@ -29,6 +29,7 @@ $(document).ready(function () {
                 </tr>
             `);
 
+            // clicking row links to player page
             row.click(function(){
                 window.location.href = "details.html?name="+encodeURIComponent(e.Name);
             })
@@ -38,4 +39,3 @@ $(document).ready(function () {
     });
 
 });
-
