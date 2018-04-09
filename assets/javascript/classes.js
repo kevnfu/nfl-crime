@@ -1,9 +1,16 @@
 class AJAX {
     static searchPlayer(player, f) {
         $.ajax({
-            url: "http://NflArrest.com/api/v1/player/search/?term=" + player,
+            url: "http://NflArrest.com/api/v1/player/search/?term=" + encodeURIComponent(player),
             method: "GET"
         }).then(f);    
+    }
+
+    static arrestDetails(player, f) {
+        $.ajax({
+            url: "http://NflArrest.com/api/v1/player/arrests/" + encodeURIComponent(player),
+            method: "GET"
+        }).then(f);
     }
 
     static topTeams(f) {
@@ -26,12 +33,17 @@ class AJAX {
     static searchGif(query, f) {
         $.ajax({
             url: "https://api.giphy.com/v1/gifs/search?" + $.param({
-                api_key: key, 
+                api_key: "aExZtytookBSVzlAfYuyRa519qcywPU3", 
                 q : query, 
-                limit: limit,
+                limit: 10,
                 offset: 0
             }),
             method: "GET"
         }).then(f);
     }
+
+}
+
+class Render {
+
 }

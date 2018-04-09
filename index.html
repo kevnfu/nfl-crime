@@ -8,7 +8,7 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <!-- Jquery Reference  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Add Javascript file -->
@@ -19,7 +19,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+<div class="container">
+        
+
+<div id="search-players">
+    <form>
+        <input type="text">
+        <button id="search-btn">Search</button>
+    </form>
+    <div id="results"></div>
+</div>
+
+<div id="search-modal" class="modal">
+    <div class="modal-content">
+        <h4><span id="num"></span> Results</h4>
+        <table class="highlight">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Arrest Count</th>
+                </tr>
+            </thead>
+
+            <tbody id="search-table">
+                
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
 
 <!-- Table for top teams  -->
 <table class="highlight" id="top-teams">
@@ -30,8 +60,9 @@
     </tr>
 </table>
 
+</div>
 <!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 
 
