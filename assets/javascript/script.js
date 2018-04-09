@@ -85,7 +85,7 @@ $(document).ready(function () {
 
             var articleUrl = (response.articles[i].url);
             $articleWell.append(
-                "<a href= '" + articleUrl + "'>" + "Click here for full article." +
+                "<a href= '" + articleUrl + "'>" + "Click here to read more." +
                 "</a>"
             )
         };
