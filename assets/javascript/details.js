@@ -3,6 +3,9 @@ let player = params.get("name");
 // console.log(player);
 
 $(document).ready(function() {
+    $(".modal").modal();
+    $("#form1").submit(onSearchPlayerClick);
+
     AJAX.arrestDetails(player, function(response) {
         // console.log(response);
         response.forEach(e => {
