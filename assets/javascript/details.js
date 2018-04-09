@@ -3,6 +3,10 @@ let player = params.get("name");
 // console.log(player);
 
 $(document).ready(function() {
+
+    let nameElem = $(`<h5 class="section">${player} Crimes</h5>`);
+    $("#crimes").prepend(nameElem);
+
     AJAX.arrestDetails(player, function(response) {
         // console.log(response);
         response.forEach(e => {
@@ -20,8 +24,8 @@ $(document).ready(function() {
                     </div>
                 </div>
             `);
-
             $("#crimes").append(elem);
+            
         })
     });
 

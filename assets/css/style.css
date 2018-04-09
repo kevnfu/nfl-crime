@@ -61,3 +61,7 @@ body {
 #foot {
   background-color: #FF3932;
 }
+
+#details-container {
+    padding-top: 55px;
+}
