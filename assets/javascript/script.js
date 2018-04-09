@@ -5,45 +5,36 @@ $(document).ready(function () {
 
     //Top teams
     AJAX.topTeams(function (response) {
-        console.log(response);
-        for (i = 0; i < response.length; i++) {
-            var tPlace = ("#" + (i + 1));
-            var tName = (response[i].Team_preffered_name);
-            var tCount = (response[i].arrest_count);
-
-            $("#top-teams > tbody").append(
-                "<tr><td>" +
-                tPlace +
-                "</td><td>" +
-                tName +
-                "</td><td>" +
-                tCount +
-                "</td></tr>"
-            );
-        };
+        response.forEach(function(e, i) {
+            let row = $(`
+                <tr>
+                    <td>#${i+1}</td>
+                    <td>${e.Team_preffered_name}</td>
+                    <td>${e.arrest_count}</td>
+                </tr>
+            `);
+            $("#top-teams > tbody").append(row);
+        })
     })
 
     //Top players
     AJAX.topPlayers(function (response) {
-        console.log(response);
-        for (i = 0; i < response.length; i++) {
-            var tPlace = ("#" + (i + 1));
-            var tName = (response[i].Name);
-            var tTeamName = (response[i].Team_city + " " + response[i].Team_name);
-            var tCount = (response[i].arrest_count);
+        response.forEach(function(e, i) {
+            let row = $(`
+                <tr>
+                    <td>#${i+1}</td>
+                    <td>${e.Name}</td>
+                    <td>${e.Team_city} ${e.Team_name}</td>
+                    <td>${e.arrest_count}</td>
+                </tr>
+            `);
 
-            $("#top-players > tbody").append(
-                "<tr><td>" +
-                tPlace +
-                "</td><td>" +
-                tName +
-                "</td><td>" +
-                tTeamName +
-                "</td><td>" +
-                tCount +
-                "</td></tr>"
-            );
-        };
+            row.click(function(){
+                window.location.href = "details.html?name="+encodeURIComponent(e.Name);
+            })
+            
+            $("#top-players > tbody").append(row);
+        });
     });
 
 });
