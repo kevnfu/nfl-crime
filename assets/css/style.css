@@ -1,0 +1,63 @@
+body {
+    height: 100%;
+}
+
+#parOne {
+  /* The image used */
+  background-image: url("http://j469.ascjclass.org/wp-content/uploads/sites/22/2016/12/roger-goodell-012615-getty-ftr-usjpg_2injpggbta2k17v2aq1e6hgxq.jpg");
+
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  vertical-align: middle; 
+}
+#parTwo {
+  
+  background-image: url("https://images7.alphacoders.com/743/743102.jpg");
+  
+ 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}  
+#home-logo {
+    font-size: 25px;
+    font-family: Lato;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#nav {
+  overflow: hidden;
+  background-color: grey;
+  position: fixed;
+  z-index: 2;
+}
+
+#nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#nav a:hover {
+  background-color: white;
+  color: #666;
+  
+}
+
+#nav a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+#foot {
+  background-color: #FF3932;
+}
