@@ -1,9 +1,16 @@
 class AJAX {
     static searchPlayer(player, f) {
         $.ajax({
-            url: "http://NflArrest.com/api/v1/player/search/?term=" + player,
+            url: "http://NflArrest.com/api/v1/player/search/?term=" + encodeURIComponent(player),
             method: "GET"
         }).then(f);    
+    }
+
+    static arrestDetails(player, f) {
+        $.ajax({
+            url: "http://NflArrest.com/api/v1/player/arrests/" + encodeURIComponent(player),
+            method: "GET"
+        }).then(f);
     }
 
     static topTeams(f) {
@@ -41,4 +48,9 @@ class AJAX {
             method: "GET"
         }).then(f);
     }
+
+}
+
+class Render {
+
 }
