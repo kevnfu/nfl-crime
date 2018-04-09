@@ -4,7 +4,7 @@ body {
 
 #parOne {
   /* The image used */
-  background-image: url("https://images7.alphacoders.com/743/743102.jpg");
+  background-image: url("http://j469.ascjclass.org/wp-content/uploads/sites/22/2016/12/roger-goodell-012615-getty-ftr-usjpg_2injpggbta2k17v2aq1e6hgxq.jpg");
 
 
   /* Create the parallax scrolling effect */
@@ -14,31 +14,26 @@ body {
   background-size: cover;
   vertical-align: middle; 
 }
-/* #parTwo {
+#parTwo {
   
-  background-image: url("http://www.cheatsheet.com/wp-content/uploads/2014/07/NFL-Fan-Arrested-Allison-Joyce-Getty-Images.jpg");
+  background-image: url("https://images7.alphacoders.com/743/743102.jpg");
   
-  height: 100%;
-
-  transform: translate3d(-50%, 10%, 0px, 500px); 
-  opacity: 1;
-
  
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   
-}  */
-
+}  
 #home-logo {
     font-size: 25px;
     font-family: Lato;
     padding-left: 20px;
+    padding-right: 20px;
 }
 #nav {
   overflow: hidden;
-  background-color: #ff6f00;
+  background-color: grey;
   position: fixed;
   z-index: 2;
 }
@@ -53,8 +48,9 @@ body {
 }
 
 #nav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: white;
+  color: #666;
+  
 }
 
 #nav a.active {
@@ -62,4 +58,6 @@ body {
   color: white;
 }
 
-
+#foot {
+  background-color: #FF3932;
+}
