@@ -8,14 +8,14 @@ class AJAX {
 
     static topTeams(f) {
         $.ajax({
-            url: "http://NflArrest.com/api/v1/team/",
+            url: "http://NflArrest.com/api/v1/team/?limit=10",
             method: "GET"
         }).then(f);
     }
 
     static topPlayers(f) {
         $.ajax({
-            url:"http://NflArrest.com/api/v1/player?limit=25",
+            url:"http://NflArrest.com/api/v1/player?limit=10",
             method: "GET"
         }).then(f);
     }
