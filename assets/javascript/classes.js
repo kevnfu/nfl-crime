@@ -51,6 +51,26 @@ class AJAX {
 
 }
 
-class Render {
+// function for search modal
+function onSearchPlayerClick(event) {
+    event.preventDefault();
+    let term = $("#search").val();
 
+    AJAX.searchPlayer(term, function(response) {
+        $("#num").html(response.length);
+        $("#search-table").html("");
+
+        response.forEach(e => {
+            let elem = $(`
+                <tr>
+                    <td><a href="details.html?name=${encodeURIComponent(e.Name)}">${e.Name}</a></td>
+                    <td>${e.arrest_count}</td>
+                </tr>
+            `);
+
+            $("#search-table").append(elem);
+        });
+
+        $("#search-modal").modal("open");
+    })
 }

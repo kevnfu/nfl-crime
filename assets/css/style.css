@@ -3,29 +3,42 @@ body {
 }
 #nav {
   overflow: hidden;
-  background-color: grey;
+  background-color: #f5f5f5;
   position: fixed;
+  top: 0;
   z-index: 2;
 }
-
 #nav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #666;
   text-align: center;
   text-decoration: none;
-  font-size: 17px;
+  
 }
 
 #nav a:hover {
-  background-color: white;
-  color: #666;
+  background-color: #616161;
+  color: #fafafa;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #999999;
 }
 
 #nav a.active {
   background-color: #4caf50;
   color: white;
 }
+#home-logo {
+  font-family: 'Faster One', cursive;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #333;
+}
+
+input input:focus {
+  background-color: #666;
+}
+
 #parOne {
   /* The image used */
   background-image: url("http://j469.ascjclass.org/wp-content/uploads/sites/22/2016/12/roger-goodell-012615-getty-ftr-usjpg_2injpggbta2k17v2aq1e6hgxq.jpg");
@@ -37,6 +50,11 @@ body {
   background-size: cover;
   vertical-align: middle;
 }
+#grass {
+  background-image: url("https://cdn166.picsart.com/221124750023201.jpg?r1024x1024");
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 #parTwo {
   background-image: url("https://images7.alphacoders.com/743/743102.jpg");
 
@@ -45,25 +63,30 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#home-logo {
-  font-size: 25px;
-  font-family: Lato;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 #players {
-  border-radius: 50px 20px;
-  -moz-box-shadow: 5px 5px 5px #777777;
-  -webkit-box-shadow: 5px 5px 5px #777777;
-  box-shadow: 5px 5px 5px #777777;
+  border-radius: 20px;
+  -moz-box-shadow: 5px 5px 5px #333;
+  -webkit-box-shadow: 5px 5px 5px #333;
+  box-shadow: 5px 5px 5px #333;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  background-image: url("https://images.designtrends.com/wp-content/uploads/2016/02/16104041/Flat-American-football-Leather-texture.jpg");
+  background-repeat: repeat-y;
+  background-size: contain;
 }
 #teams {
-  border-radius: 20px 50px;
-  -moz-box-shadow: 5px 5px 5px #777777;
-  -webkit-box-shadow: 5px 5px 5px #777777;
-  box-shadow: 5px 5px 5px #777777;
+  border-radius: 20px;
+  -moz-box-shadow: 5px 5px 5px #999;
+  -webkit-box-shadow: 5px 5px 5px #333;
+  box-shadow: 5px 5px 5px #333;
+  font-family: "Roboto Slab", sans-serif;
 }
 #foot {
-  background-color: #ff3932;
+  margin-top: 5px;
+  background-color: #f5f5f5;
+}
+#foot-text {
+  color: #b71c1c;
+  font-family: 'Alex Brush', cursive;
 }

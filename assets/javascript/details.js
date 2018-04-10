@@ -3,6 +3,12 @@ let player = params.get("name");
 // console.log(player);
 
 $(document).ready(function() {
+
+    let nameElem = $(`<h5 class="section white-text">${player} Crimes</h5>`);
+    $("#crimes").prepend(nameElem);
+    $(".modal").modal();
+    $("#form1").submit(onSearchPlayerClick);
+
     AJAX.arrestDetails(player, function(response) {
         // console.log(response);
         response.forEach(e => {
@@ -20,8 +26,8 @@ $(document).ready(function() {
                     </div>
                 </div>
             `);
-
             $("#crimes").append(elem);
+            
         })
     });
 
@@ -41,7 +47,7 @@ $(document).ready(function() {
                                 <p>${e.description}</p>
                             </div>
                             <div class="card-action">
-                                <a href="${e.url}">See article</a>
+                                <a href="${e.url}" target="_blank">See article</a>
                             </div>
                         </div>
                     </div>
