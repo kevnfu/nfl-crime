@@ -90,4 +90,6 @@ input input:focus {
 #foot-text {
   color: #b71c1c;
   font-family: 'Alex Brush', cursive;
+  position: fixed;
+  bottom: 0;
 }
