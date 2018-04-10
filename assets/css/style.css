@@ -41,7 +41,7 @@ input input:focus {
 
 #parOne {
   /* The image used */
-  background-image: url("http://j469.ascjclass.org/wp-content/uploads/sites/22/2016/12/roger-goodell-012615-getty-ftr-usjpg_2injpggbta2k17v2aq1e6hgxq.jpg");
+  background-image: url("https://cdn.theatlantic.com/assets/media/img/upload/wire/2014/09/19/AP962003728208/lead_large.jpg?1522685976");
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -69,9 +69,9 @@ input input:focus {
   -moz-box-shadow: 5px 5px 5px #333;
   -webkit-box-shadow: 5px 5px 5px #333;
   box-shadow: 5px 5px 5px #333;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: 'Poller One', cursive;
   font-size: 20px;
-  background-image: url("https://images.designtrends.com/wp-content/uploads/2016/02/16104041/Flat-American-football-Leather-texture.jpg");
+  /* background-image: url("https://images.designtrends.com/wp-content/uploads/2016/02/16104041/Flat-American-football-Leather-texture.jpg"); */
   background-repeat: repeat-y;
   background-size: contain;
 }
@@ -80,7 +80,8 @@ input input:focus {
   -moz-box-shadow: 5px 5px 5px #999;
   -webkit-box-shadow: 5px 5px 5px #333;
   box-shadow: 5px 5px 5px #333;
-  font-family: "Roboto Slab", sans-serif;
+  font-size: 20px;
+  font-family: 'Poller One', cursive;
 }
 #foot {
   margin-top: 5px;
