@@ -41,9 +41,9 @@ input input:focus {
 
 #parOne {
   /* The image used */
-  background-image: url("https://cdn.theatlantic.com/assets/media/img/upload/wire/2014/09/19/AP962003728208/lead_large.jpg?1522685976");
+  background-image: url("https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/09/24/22/buffalobills2409a.jpg?w968h681");
 
-  /* Create the parallax scrolling effect */
+  /* Create the parallax scrolling effect https://cdn.theatlantic.com/assets/media/img/upload/wire/2014/09/19/AP962003728208/lead_large.jpg?1522685976*/
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,7 +70,7 @@ input input:focus {
   -webkit-box-shadow: 5px 5px 5px #333;
   box-shadow: 5px 5px 5px #333;
   font-family: 'Poller One', cursive;
-  font-size: 20px;
+  /* font-size: 20px; */
   /* background-image: url("https://images.designtrends.com/wp-content/uploads/2016/02/16104041/Flat-American-football-Leather-texture.jpg"); */
   background-repeat: repeat-y;
   background-size: contain;
@@ -80,7 +80,7 @@ input input:focus {
   -moz-box-shadow: 5px 5px 5px #999;
   -webkit-box-shadow: 5px 5px 5px #333;
   box-shadow: 5px 5px 5px #333;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-family: 'Poller One', cursive;
 }
 #foot {
